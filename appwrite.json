@@ -1,0 +1,8 @@
+{
+  "name": "Backtester",
+  "runtime": "python-3.12",
+  "commands": [
+    "pip install -r requirements.txt --target ./lib/python3.12/site-packages"
+  ],
+  "entrypoint": "main.py"
+}
