@@ -31,15 +31,12 @@ def main(context):
         # log extracted values
         print(f"\nentryTime: {entry_time}, spreadWidth: {spread_width}, entryCredit: {entry_credit}")
         print(f"numberOfSpreads: {number_of_spreads}, stopPrice: {stop_price}, limitPrice: {limit_price}, stopLossMultiplier: {stop_loss_multiplier}")
-        
-        # call veic
-        total_profit = veic(entry_time, spread_width, entry_credit, number_of_spreads, stop_price, limit_price, stop_loss_multiplier)
-        print(f"\ntotal profit: {total_profit}")
-        
+                
         # return response
         return context.res.json({
-            "response": total_profit,
+            "response": "hello",
         })
     except Exception as e:
         print(f"error: {str(e)}")
+
         return context.res.json({"error": str(e)})    
